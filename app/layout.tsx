@@ -13,8 +13,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body
+        style={{
+          margin: 0,
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <header
+          style={{
+            width: "100%",
+            backgroundColor: "red",
+            height: "25px",
+          }}
+        ></header>
+        <div
+          style={{
+            flex: 1,
+          }}
+        >
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </div>
+        <footer
+          style={{
+            height: "25px",
+            backgroundColor: "blue",
+            position: "relative",
+            bottom: "0px",
+          }}
+        ></footer>
       </body>
     </html>
   );
