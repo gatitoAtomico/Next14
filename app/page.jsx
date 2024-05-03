@@ -3,9 +3,16 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 const Container = styled.div`
-  color: red;
+  display: flex;
+  flex-direction: column;
+  gap: "5px";
+`;
+
+const Row = styled.div`
+  padding: 5px;
 `;
 
 export default function Page() {
@@ -29,5 +36,15 @@ export default function Page() {
     result();
   }, []);
 
-  return <Container>{JSON.stringify(data)}</Container>;
+  return (
+    <Container>
+      <Row>{JSON.stringify(data)}</Row>
+      <Row>
+        <Link href={"/blog"}>Blog</Link>
+      </Row>
+      <Row>
+        <Link href={"/products"}>Products</Link>
+      </Row>
+    </Container>
+  );
 }
