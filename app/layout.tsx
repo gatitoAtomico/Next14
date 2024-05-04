@@ -1,3 +1,4 @@
+import ReactQueryProvider from "./_lib/providers/ReactQueryProvider";
 import type { Metadata } from "next";
 import StyledComponentsRegistry from "./lib/registry";
 
@@ -37,7 +38,9 @@ export default function RootLayout({
             flex: 1,
           }}
         >
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          <ReactQueryProvider>
+            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          </ReactQueryProvider>
         </div>
         <footer
           style={{

@@ -1,9 +1,10 @@
 "use client";
 
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { useQuery } from "@tanstack/react-query";
 
 const Container = styled.div`
   display: flex;
@@ -16,29 +17,29 @@ const Row = styled.div`
 `;
 
 export default function Page() {
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
+  const {
+    isLoading,
+    error,
+    data: res,
+  } = useQuery({
+    queryKey: ["randomJoke"],
+    queryFn: () =>
+      axios.get("api/jokes", {
+        params: {
+          category: "sportad",
+        },
+      }),
+  });
 
-  useEffect(() => {
-    let result = async () => {
-      try {
-        let data = await axios.get("api/jokes", {
-          params: {
-            category: "sport",
-          },
-        });
-        setData(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+  const jokeMessage = res?.data?.message;
 
-    result();
-  }, []);
+  if (isLoading) return "Loading...";
+
+  if (error) return "An error has occurreds: " + error.response.data.message;
 
   return (
     <Container>
-      <Row>{JSON.stringify(data)}</Row>
+      <Row>{jokeMessage}</Row>
       <Row>
         <Link href={"/blog"}>Blog</Link>
       </Row>
