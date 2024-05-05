@@ -26,7 +26,7 @@ export default function Page() {
     queryFn: () =>
       axios.get("api/jokes", {
         params: {
-          category: "sportad",
+          category: "sport",
         },
       }),
   });
@@ -35,7 +35,7 @@ export default function Page() {
 
   if (isLoading) return "Loading...";
 
-  if (error) return "An error has occurreds: " + error.response.data.message;
+  if (error) return "An error has occurre: " + error.response.data.message;
 
   return (
     <Container>
