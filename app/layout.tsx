@@ -1,6 +1,7 @@
 import ReactQueryProvider from "./_lib/providers/ReactQueryProvider";
 import type { Metadata } from "next";
 import StyledComponentsRegistry from "./lib/registry";
+import ReduxToolkitProvider from "./_lib/providers/ReduxToolkitProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -38,9 +39,11 @@ export default function RootLayout({
             flex: 1,
           }}
         >
-          <ReactQueryProvider>
-            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-          </ReactQueryProvider>
+          <ReduxToolkitProvider>
+            <ReactQueryProvider>
+              <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            </ReactQueryProvider>
+          </ReduxToolkitProvider>
         </div>
         <footer
           style={{

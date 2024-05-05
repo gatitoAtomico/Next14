@@ -4,7 +4,7 @@ import userSlice from "../features/themeSlice";
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      user: userSlice,
+      counter: userSlice,
     },
   });
 };

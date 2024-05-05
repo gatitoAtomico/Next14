@@ -10,7 +10,7 @@ const initialState: CounterState = {
 };
 
 export const themeSlice = createSlice({
-  name: "user",
+  name: "counter",
   initialState,
   reducers: {
     increment: (state) => {

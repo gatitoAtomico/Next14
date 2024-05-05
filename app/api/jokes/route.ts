@@ -8,7 +8,6 @@ export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
     const category = searchParams.get("category");
-    console.log("server side component", env.API_SERVER);
     let res = await axios.get(`${env.API_SERVER}`, {
       params: {
         category,
