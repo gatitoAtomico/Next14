@@ -1,31 +1,21 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../providers/store";
+"use client";
 
-interface CounterState {
-  value: number;
-}
+import { createSlice } from "@reduxjs/toolkit";
+import { Palette, appTheme } from "@/app/_Utils/theme";
 
-const initialState: CounterState = {
-  value: 0,
-};
+const defaultTheme: Palette = appTheme.main;
 
 export const themeSlice = createSlice({
-  name: "counter",
-  initialState,
+  name: "theme",
+  initialState: defaultTheme,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    changeTheme: (state, action) => {
+      let payload = action.payload;
+      return (state = appTheme[payload] || defaultTheme);
     },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = themeSlice.actions;
+export const { changeTheme } = themeSlice.actions;
 
 export default themeSlice.reducer;

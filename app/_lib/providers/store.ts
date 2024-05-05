@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userSlice from "../features/themeSlice";
+import themeSlice from "../features/themeSlice";
+import countSlice from "../features/counterSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      counter: userSlice,
+      theme: themeSlice,
+      counter: countSlice,
     },
   });
 };
