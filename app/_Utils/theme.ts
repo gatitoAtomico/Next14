@@ -10,6 +10,6 @@ type Theme = {
 };
 
 export const appTheme: Theme = {
-  gatito: { primaryColor: "red", secondaryColor: "yellow" },
-  main: { primaryColor: "blue", secondaryColor: "green" },
+  gatito: { primaryColor: "green", secondaryColor: "yellow" },
+  main: { primaryColor: "cyan", secondaryColor: "green" },
 };
