@@ -27,32 +27,34 @@ export default function RootLayout({
           minHeight: "100vh",
         }}
       >
-        <header
-          style={{
-            width: "100%",
-            backgroundColor: "red",
-            height: "25px",
-          }}
-        ></header>
-        <div
-          style={{
-            flex: 1,
-          }}
-        >
-          <ReduxToolkitProvider>
-            <ReactQueryProvider>
-              <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-            </ReactQueryProvider>
-          </ReduxToolkitProvider>
-        </div>
-        <footer
-          style={{
-            height: "25px",
-            backgroundColor: "blue",
-            position: "relative",
-            bottom: "0px",
-          }}
-        ></footer>
+        <ReduxToolkitProvider>
+          <ReactQueryProvider>
+            <StyledComponentsRegistry>
+              <header
+                style={{
+                  width: "100%",
+                  backgroundColor: "red",
+                  height: "25px",
+                }}
+              ></header>
+              <div
+                style={{
+                  flex: 1,
+                }}
+              >
+                {children}
+              </div>
+              <footer
+                style={{
+                  height: "25px",
+                  backgroundColor: "blue",
+                  position: "relative",
+                  bottom: "0px",
+                }}
+              ></footer>
+            </StyledComponentsRegistry>
+          </ReactQueryProvider>
+        </ReduxToolkitProvider>
       </body>
     </html>
   );

@@ -29,6 +29,7 @@ export default function Page() {
           category: "sport",
         },
       }),
+    staleTime: 10000,
   });
 
   const jokeMessage = res?.data?.message;
