@@ -40,3 +40,15 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     </ThemeContext.Provider>
   );
 };
+
+export const useTheme = () => {
+  let context = useContext(ThemeContext);
+
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+
+  let { theme, toggleTheme } = context;
+
+  return { theme: colors[theme], themeName: theme, toggleTheme };
+};
