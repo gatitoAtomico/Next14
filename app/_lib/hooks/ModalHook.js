@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import usemodal from "../_Utils/hooks/useModal";
+import usemodal from "../../_Utils/hooks/useModal";
 
 const Modal = styled.div`
   position: fixed;

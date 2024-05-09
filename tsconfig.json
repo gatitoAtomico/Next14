@@ -33,7 +33,8 @@
     "app/_lib/providers/ReactQueryProvider.js",
     "app/api/jokes/route.js",
     "app/page.jsx",
-    "app/products/[productId]/reviews/[reviewId]/page.jsx"
+    "app/products/[productId]/reviews/[reviewId]/page.jsx",
+    "app/_lib/providers/ThemeProvider.js"
   ],
   "exclude": ["node_modules"]
 }

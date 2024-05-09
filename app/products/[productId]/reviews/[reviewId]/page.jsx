@@ -1,6 +1,6 @@
 "use client";
 
-import ModalHook from "../../../../_components/ModalHook";
+import ModalHook from "../../../../_lib/hooks/ModalHook";
 import styled from "styled-components";
 import { useState } from "react";
 import ReviewList from "./review";
