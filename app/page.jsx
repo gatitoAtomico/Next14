@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Row = styled.div`
-  padding: 5px;
+  padding: 10px;
   background: ${({ theme }) => theme.background};
 `;
 
