@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
@@ -32,6 +32,10 @@ export default function Page() {
       }),
     staleTime: 10000,
   });
+
+  useEffect(() => {
+    console.log("Hello");
+  }, []);
 
   const jokeMessage = res?.data?.message;
 
