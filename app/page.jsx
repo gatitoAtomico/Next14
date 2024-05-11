@@ -37,7 +37,8 @@ export default function Page() {
 
   if (isLoading) return "Loading...";
 
-  if (error) return "An error has occurre: " + error.response.data.message;
+  if (error)
+    return "An error has occurre in the page: " + error.response.data.message;
 
   return (
     <Container>
