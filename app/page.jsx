@@ -49,34 +49,6 @@ export default function Page() {
       <Row>
         <Link href={"/products"}>Products1</Link>
       </Row>
-      <Row>{jokeMessage}</Row>
-      <Row>
-        <Link href={"/blog"}>Blog1</Link>
-      </Row>
-      <Row>
-        <Link href={"/products"}>Products1</Link>
-      </Row>
-      <Row>{jokeMessage}</Row>
-      <Row>
-        <Link href={"/blog"}>Blog1</Link>
-      </Row>
-      <Row>
-        <Link href={"/products"}>Products1</Link>
-      </Row>
-      <Row>{jokeMessage}</Row>
-      <Row>
-        <Link href={"/blog"}>Blog1</Link>
-      </Row>
-      <Row>
-        <Link href={"/products"}>Products1</Link>
-      </Row>
-      <Row>{jokeMessage}</Row>
-      <Row>
-        <Link href={"/blog"}>Blog1</Link>
-      </Row>
-      <Row>
-        <Link href={"/products"}>Products1</Link>
-      </Row>
     </Container>
   );
 }
