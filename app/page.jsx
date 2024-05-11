@@ -9,7 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: "5px";
+  gap: "15px";
 `;
 
 const Row = styled.div`
