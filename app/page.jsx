@@ -15,6 +15,7 @@ const Container = styled.div`
 const Row = styled.div`
   padding: 20px;
   font-size: 2px;
+  margin: 2px;
   background: ${({ theme }) => theme.background};
 `;
 
