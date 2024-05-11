@@ -17,11 +17,6 @@ const Row = styled.div`
   background: ${({ theme }) => theme.background};
 `;
 
-const Row2 = styled.div`
-  padding: 5px;
-  background: ${({ theme }) => theme.background};
-`;
-
 export default function Page() {
   const {
     isLoading,
@@ -35,7 +30,7 @@ export default function Page() {
           category: "sport",
         },
       }),
-    staleTime: 10000,
+    staleTime: 1000,
   });
 
   const jokeMessage = res?.data?.message;
@@ -47,6 +42,13 @@ export default function Page() {
 
   return (
     <Container>
+      <Row>{jokeMessage}</Row>
+      <Row>
+        <Link href={"/blog"}>Blog1</Link>
+      </Row>
+      <Row>
+        <Link href={"/products"}>Products1</Link>
+      </Row>
       <Row>{jokeMessage}</Row>
       <Row>
         <Link href={"/blog"}>Blog1</Link>
