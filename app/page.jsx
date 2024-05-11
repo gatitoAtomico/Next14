@@ -30,7 +30,7 @@ export default function Page() {
           category: "sport",
         },
       }),
-    staleTime: 10000,
+    staleTime: 1000,
   });
 
   useEffect(() => {
@@ -46,27 +46,6 @@ export default function Page() {
 
   return (
     <Container>
-      <Row>{jokeMessage}</Row>
-      <Row>
-        <Link href={"/blog"}>Blog1</Link>
-      </Row>
-      <Row>
-        <Link href={"/products"}>Products1</Link>
-      </Row>
-      <Row>{jokeMessage}</Row>
-      <Row>
-        <Link href={"/blog"}>Blog1</Link>
-      </Row>
-      <Row>
-        <Link href={"/products"}>Products1</Link>
-      </Row>
-      <Row>{jokeMessage}</Row>
-      <Row>
-        <Link href={"/blog"}>Blog1</Link>
-      </Row>
-      <Row>
-        <Link href={"/products"}>Products1</Link>
-      </Row>
       <Row>{jokeMessage}</Row>
       <Row>
         <Link href={"/blog"}>Blog1</Link>
