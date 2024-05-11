@@ -43,10 +43,10 @@ export default function Page() {
     <Container>
       <Row>{jokeMessage}</Row>
       <Row>
-        <Link href={"/blog"}>Blog</Link>
+        <Link href={"/blog"}>Blog1</Link>
       </Row>
       <Row>
-        <Link href={"/products"}>Products</Link>
+        <Link href={"/products"}>Products1</Link>
       </Row>
     </Container>
   );
