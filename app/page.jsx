@@ -17,6 +17,11 @@ const Row = styled.div`
   background: ${({ theme }) => theme.background};
 `;
 
+const Row2 = styled.div`
+  padding: 5px;
+  background: ${({ theme }) => theme.background};
+`;
+
 export default function Page() {
   const {
     isLoading,
