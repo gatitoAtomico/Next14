@@ -44,7 +44,7 @@ export default function RootLayout({
                   flex: 1,
                 }}
               >
-                <ThemeProvider> {children}</ThemeProvider>
+                <ThemeProvider>{children}</ThemeProvider>
               </div>
               <footer
                 style={{
