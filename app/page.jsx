@@ -34,7 +34,7 @@ export default function Page() {
   });
 
   useEffect(() => {
-    console.log("Hello");
+    console.log("Hello from feature 1");
   }, []);
 
   const jokeMessage = res?.data?.message;
